@@ -18,3 +18,11 @@ body {
   gap: 20px;
   text-align: center;
 }
+
+.examples {
+  background-color: transparent;
+  width: 70%;
+  padding: 10px;
+  margin: 0 auto;
+  color: rgb(152, 114, 202);
+}
