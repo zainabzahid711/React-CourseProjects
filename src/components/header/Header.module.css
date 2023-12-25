@@ -1,0 +1,22 @@
+ .header {
+   text-align: center
+ }
+
+ .heading {
+   font-size: 50px;
+   background-image: linear-gradient(to right, rgb(122, 247, 19), rgb(170, 33, 33), rgb(111, 126, 59), #cf490b9f, rgb(53, 20, 201));
+   background-clip: text;
+   color: transparent;
+ }
+
+ .paragragh {
+   font-size: 20px;
+   background-image: linear-gradient(to right, rgb(122, 247, 19), rgb(170, 33, 33), rgb(111, 126, 59), #cf490b9f, rgb(22, 233, 180));
+   background-clip: text;
+   color: transparent;
+ }
+
+ .reactLogo {
+   width: 190px;
+   text-align: center;
+ }
