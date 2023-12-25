@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import { dataDescription } from "./data";
 
 import CoreConcepts from "./components/CoreConcepts/CoreConcepts";
+import TabButton from "./components/TabButton/TabButton";
 
 function App() {
   return (
@@ -22,6 +23,12 @@ function App() {
           <CoreConcepts {...dataDescription[2]} />
           <CoreConcepts {...dataDescription[3]} />
         </ul>
+      </section>
+      <section className={style.examples}>
+        <h2>Examples</h2>
+        <menu>
+          <TabButton label="components" />
+        </menu>
       </section>
     </div>
   );
