@@ -1,10 +1,16 @@
 import React from "react";
 import style from "./TabButton.module.css";
 
-function TabButton({ label }) {
+function TabButton({ children, onSelect }) {
+  function handleClick() {
+    console.log("helo react");
+  }
+
   return (
     <li className={style.btnLists}>
-      <button>{label}</button>
+      <button className={style.tabButton} onClick={onSelect}>
+        {children}
+      </button>
     </li>
   );
 }
