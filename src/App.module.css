@@ -26,3 +26,8 @@ body {
   margin: 0 auto;
   color: rgb(152, 114, 202);
 }
+
+.menubtns {
+  display: flex;
+  gap: 20px;
+}

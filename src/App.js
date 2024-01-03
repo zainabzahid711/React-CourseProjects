@@ -7,6 +7,9 @@ import CoreConcepts from "./components/CoreConcepts/CoreConcepts";
 import TabButton from "./components/TabButton/TabButton";
 
 function App() {
+  function handleSelect() {
+    console.log("hello react in app js");
+  }
   return (
     <div>
       <Header />
@@ -26,9 +29,13 @@ function App() {
       </section>
       <section className={style.examples}>
         <h2>Examples</h2>
-        <menu>
-          <TabButton label="components" />
+        <menu className={style.menubtns}>
+          <TabButton onSelect={handleSelect}>Components</TabButton>
+          <TabButton>JSX</TabButton>
+          <TabButton>Props</TabButton>
+          <TabButton>State</TabButton>
         </menu>
+        Dynamic Content
       </section>
     </div>
   );
