@@ -1,12 +1,16 @@
 import React from "react";
-// import mainImg from "../../assets/png/game-logo.png";/
+import style from "./Header.module.css";
+import mainImg from "../../assets/png/game-logo.png";
 
 function Header() {
-  <div>
-    {/* <img src={mainImg} alt="main-image-logo" />*/}
-
-    <h1>hwlo</h1>
-  </div>;
+  return (
+    <>
+      <div className={style.centerDiv}>
+        <img className={style.mainImage} src={mainImg} alt="main-image-logo" />
+        <h1 className={style.heading}>Tic-Tac-Toe</h1>
+      </div>
+    </>
+  );
 }
 
 export default Header;
