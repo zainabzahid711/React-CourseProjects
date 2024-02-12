@@ -1,0 +1,31 @@
+.playerr {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pDetails {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.buttonn {
+  padding: 3px 10px;
+  color: grey;
+  cursor: pointer;
+  background-color: rgb(58, 54, 54);
+  border: none;
+  border: 1px solid rgb(51, 49, 49);
+}
+
+.inputPlayer {
+  margin-right: 20px;
+  background-color: rgb(58, 54, 54);
+  border: none;
+  border: 1px solid rgb(68, 63, 63);
+  padding: 7px 2px;
+  outline: none;
+}
