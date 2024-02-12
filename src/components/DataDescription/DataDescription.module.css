@@ -1,0 +1,16 @@
+.coreConcepts {
+  text-align: center;
+  background-color: rgb(41, 41, 45);
+  border-radius: 50px;
+  width: 70%;
+  padding: 10px;
+  margin: 0 auto;
+  color: rgb(162, 172, 21);
+}
+
+.coreComponents {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  text-align: center;
+}
