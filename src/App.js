@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import style from "./App.module.css";
 import Header from "./components/header/Header";
 
-import CoreConcepts from "./components/CoreConcepts/CoreConcepts";
 import Examples from "./components/Examples/Examples";
+import DataDescription from "./components/DataDescription/DataDescription";
 
 function App() {
   return (
     <div>
       <Header />
-      <CoreConcepts />
+      <DataDescription />
       <Examples />
     </div>
   );
