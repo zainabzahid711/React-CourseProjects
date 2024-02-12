@@ -1,12 +1,13 @@
 import React from "react";
 import Header from "./Components/Header/Header";
+import Game from "./Components/gameBoard/Game";
 
 function App() {
   return (
-    <div>
+    <main>
       <Header />
-      <h1>Tic-Tac Game</h1>
-    </div>
+      <Game />
+    </main>
   );
 }
 
