@@ -6,7 +6,6 @@
 
 .pDetails {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   gap: 20px;
@@ -26,6 +25,6 @@
   background-color: rgb(58, 54, 54);
   border: none;
   border: 1px solid rgb(68, 63, 63);
-  padding: 7px 2px;
+  padding: 5px 0px;
   outline: none;
 }

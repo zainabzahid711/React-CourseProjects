@@ -1,24 +1,44 @@
 import React, { useState } from "react";
 import style from "./Players.module.css";
 
-function Players({ name, symbol }) {
+function Players({ initialName, symbol }) {
+  const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
   function handleClick() {
-    setIsEditing(true);
+    // setIsEditing(isEditing ? false : true);
+    setIsEditing(!isEditing);
   }
-  let playerName = <span className={style.playerName}>{name}</span>;
+
+  function handleChange(event) {
+    setPlayerName(event.target.value);
+  }
+  let editablePlayerName = (
+    <span className={style.playerName}>{playerName}</span>
+  );
+  let btnCaption = "Edit";
+
   if (isEditing) {
-    playerName = <input type="text" required className={style.inputPlayer} />;
+    editablePlayerName = (
+      <input
+        type="text"
+        required
+        value={playerName}
+        onChange={handleChange}
+        className={style.inputPlayer}
+      />
+    );
+    btnCaption = "Save";
   }
   return (
     <>
       <li className={style.pDetails}>
         <span className={style.playerr}>
-          {playerName}
+          {editablePlayerName}
           <span className={style.playerSymbol}>{symbol}</span>
         </span>
         <button onClick={handleClick} className={style.buttonn}>
-          Edit
+          {/* {isEditing ? "Save" : "Edit"} */}
+          {btnCaption}
         </button>
       </li>
     </>
