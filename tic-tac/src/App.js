@@ -5,8 +5,10 @@ import Game from "./Components/gameBoard/Game";
 function App() {
   return (
     <main>
-      <Header />
-      <Game />
+      <div>
+        <Header />
+        <Game />
+      </div>
     </main>
   );
 }
