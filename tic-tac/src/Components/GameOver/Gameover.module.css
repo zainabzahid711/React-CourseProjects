@@ -1,0 +1,44 @@
+.gameOverContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  top: 84%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  background-color: rgba(27, 26, 26, 0.9); 
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 38%;
+  height: 30rem;
+  }
+  
+  .gameOverContainer h2 {
+    color: rgb(230, 230, 14);
+    font-size: 45px;
+  }
+  
+  .gameOverContainer p {
+    color: rgb(230, 230, 14);
+    font-size: 25px;
+  }
+  
+  .rematchButton {
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: 2px solid yellow;
+    background-color: transparent;
+    font-weight: 700;
+    color: rgb(230, 230, 14);
+    cursor: pointer;
+  }
+  
+  .rematchButton:hover {
+    color: black;
+    background-color: #c7d35f;
+  }
+  

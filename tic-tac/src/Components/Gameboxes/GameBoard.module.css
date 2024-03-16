@@ -24,10 +24,11 @@
 }
 
 .GameBoardBtn {
-  width: 100px;
+  width: 100px; 
   height: 100px;
   padding: 50px;
   background-color: gray;
+  color: rgb(58, 54, 54);
   border: none;
   font-size: 40px;
   font-weight: 900;

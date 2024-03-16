@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./Players.module.css";
 
-function Players({ initialName, symbol }) {
+function Players({ initialName, symbol, isActive }) {
   const [playerName, setPlayerName] = useState(initialName);
   const [isEditing, setIsEditing] = useState(false);
   function handleClick() {
@@ -31,7 +31,8 @@ function Players({ initialName, symbol }) {
   }
   return (
     <>
-      <li className={style.pDetails}>
+      <div className={style.pDetails}>
+      <li className={isActive ? style.active : undefined}>
         <span className={style.playerr}>
           {editablePlayerName}
           <span className={style.playerSymbol}>{symbol}</span>
@@ -41,6 +42,7 @@ function Players({ initialName, symbol }) {
           {btnCaption}
         </button>
       </li>
+      </div>
     </>
   );
 }

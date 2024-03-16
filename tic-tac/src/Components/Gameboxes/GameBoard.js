@@ -1,38 +1,40 @@
 import React, { useState } from "react";
 import style from "./GameBoard.module.css";
 
-const initialGameBoard = [
-  [null, null, null],
-  [null, null, null],
-  [null, null, null],
-];
 
-function GameBoard() {
-  const [gameBoard, setGameBoard] = useState(initialGameBoard);
+function GameBoard({onSelectSquare, board}) {
 
-  function handleSelectSquare(rowIndex, colIndex) {
-    setGameBoard((prevgameBoard) => {
-      const updatedBoard = [
-        ...prevgameBoard.map((innerArray) => [...innerArray]),
-      ];
-      // prevGameBoard is new array in memory which contains
-      // all array elements
-      prevgameBoard[rowIndex][colIndex] = "X";
-      return updatedBoard;
-    });
-  }
+ 
+  // const [gameBoard, setGameBoard] = useState(initialGameBoard);
 
+  // function handleSelectSquare(rowIndex, colIndex) {
+  //   setGameBoard((prevgameBoard) => {
+  //     const updatedBoard = [
+  //       ...prevgameBoard.map(innerArray => [...innerArray]),
+  //     ];
+  //     // updatedBoard is new array in memory which contains
+  //     // all array elements
+  //     // updated the state in immuttable way
+  //     updatedBoard[rowIndex][colIndex] = activePlayerSymbol;
+  //     return updatedBoard;
+  //   });
+  //   onSelectSquare( );
+  // }
   return (
     <>
       <ol className={style.GameBoard}>
-        {gameBoard.map((row, rowIndex) => (
+        {board.map((row, rowIndex) => (
           <li key={rowIndex} className={style.GameBoarditems}>
             <ol className={style.GameBoardCols}>
               {row.map((playerSymbol, colIndex) => (
                 <li key={colIndex} className={style.GameBoardbtns}>
                   <button
-                    onClick={() => handleSelectSquare(rowIndex, colIndex)}
                     className={style.GameBoardBtn}
+                    onClick={() => onSelectSquare(rowIndex, colIndex) }
+                    // () => handleSelectSquare(rowIndex, colIndex) ananynmous
+                    // function so that we have all control that how handle select
+                    // is called when its called
+                    disabled={playerSymbol!==null}
                   >
                     {playerSymbol}
                   </button>
@@ -46,4 +48,4 @@ function GameBoard() {
   );
 }
 
-export default GameBoard;
+export default GameBoard;                                                                                                   
