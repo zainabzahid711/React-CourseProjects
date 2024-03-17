@@ -1,0 +1,32 @@
+.Container{
+    background-color: rgb(57, 92, 63);
+    width: 50%;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+
+.INputContainer{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+}
+.eachContainer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+input{
+    border-radius: 10px;
+    border: 1px solid white;
+    padding: 10px;
+    outline: none;
+    color: rgb(189, 194, 190);
+    background-color: transparent;
+    opacity: .7;
+}
+input:hover{
+    background-color: rgb(76, 94, 78);
+}
