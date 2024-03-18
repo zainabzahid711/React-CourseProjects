@@ -1,0 +1,25 @@
+.gameBoard {
+  /* display: flex; */
+  justify-content: center;
+  align-items: flex-start;
+  width: 40%;
+  /* height: 30rem; */
+  margin: 0 auto;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.gameContainer {
+  list-style: none;
+  background-color: rgb(58, 54, 54);
+  border-radius: 10px;
+}
+
+.players {
+  display: flex;
+  width: 100%;
+  /* gap: 30px; */
+}
+#player.players li.active{
+  border-color: #f6e35a;
+}

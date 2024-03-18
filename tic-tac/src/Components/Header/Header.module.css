@@ -1,0 +1,12 @@
+.centerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(58, 54, 54);
+}
+
+
+.mainImage {
+  width: 170px;
+}
