@@ -1,0 +1,18 @@
+.textArea{
+    text-align: center;
+}
+.logo{
+    width: 150px;
+}
+.artHeading{
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 13px;
+    color: #9a3412;
+    font-family: 'Pacifico', cursive;
+    font-style: italic;
+    font-weight: 600;
+}
+.artPara{
+    color: #a39191;
+}
