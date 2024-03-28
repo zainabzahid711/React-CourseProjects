@@ -1,5 +1,29 @@
 import React, { useState } from "react";
-import style from "./AuthInput.module.css";
+import { styled } from "styled-components";
+import CustomInput from "../input/Input";
+
+// const ControlContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   text-align: center;
+//   gap: 20px;
+//   margin-bottom: 20px;
+// `;
+
+const Button = styled.button`
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  color: #1f2937;
+  background-color: #f0b322;
+  border-radius: 6px;
+  border: none;
+  & :hover {
+    background-color: #f0920e;
+  }
+`;
 
 const AuthInput = () => {
   const [enteredEmail, setenteredEmail] = useState("");
@@ -22,40 +46,34 @@ const AuthInput = () => {
   const passwordNotFound = submit && enteredPass.trim().length < 6;
   return (
     <>
-      <div className={style.InputContainer}>
-        <div className={style.InputField}>
-          <label className={`${emailNotValid ? style.invalid : ""}`}>
-            Email
-          </label>
-          <input
-            className={emailNotValid ? style.invalid : undefined}
+      <div className="w-full max-w-sm p-8 mx-auto rounded shadow-md bg-gradient-to-b from-stone-700 to-stone-800">
+        <div className="flex flex-col gap-2 mb-6">
+          <CustomInput
+            label="Email"
+            invalid={emailNotValid}
             type="email"
-            required
-            value={enteredEmail}
             onChange={(event) => handleInputChange("email", event.target.value)}
           />
         </div>
 
-        <div className={style.InputField}>
-          <label className={`${passwordNotFound ? style.invalid : ""}`}>
-            Password
-          </label>
-          <input
-            className={passwordNotFound ? style.invalid : undefined}
+        <div className="flex flex-col gap-2 mb-6">
+          <CustomInput
+            label="Password"
+            invalid={passwordNotFound}
             type="password"
-            required
-            value={enteredPass}
             onChange={(event) =>
               handleInputChange("password", event.target.value)
             }
           />
         </div>
 
-        <div className={style.btnDiv}>
-          <span className={style.textButton}> Create a new account </span>
-          <button type="submit" className={style.button} onClick={handleLogin}>
+        <div className="flex justify-end gap-4">
+          <span className="text-amber-300 hover:text-amber-500 cursor-pointer">
+            Create a new account
+          </span>
+          <Button type="submit" onClick={handleLogin}>
             SIGN IN
-          </button>
+          </Button>
         </div>
       </div>
     </>
